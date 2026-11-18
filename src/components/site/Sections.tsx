@@ -170,7 +170,7 @@ export function WhyUs() {
         </div>
         <div className="grid gap-px overflow-hidden rounded-[2rem] bg-pearl/10 sm:grid-cols-2">
           {reasons.map((r, i) => {
-            const Icon = reasonIcons[i];
+            const Icon = reasonIcons[i] ?? Sparkles;
             return (
               <Reveal key={r.title} delay={i * 100} className="group h-full bg-deep p-10 transition-colors duration-500 hover:bg-teal/40">
                 <Icon className="h-8 w-8 text-champagne transition-transform duration-500 group-hover:scale-110" />
