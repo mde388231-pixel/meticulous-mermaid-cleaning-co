@@ -28,3 +28,4 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+- Editable business details, copy and image imports live in src/content/site.ts; sections in src/components/site read from it so content edits never touch layout code.

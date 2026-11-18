@@ -1,23 +1,39 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header, Hero, About, Services, WhyUs, Process, BeforeAfter, Gallery, Reels, Testimonials, ServiceMap, Contact, Footer } from "@/components/site/Sections";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Meticulous Mermaids Cleaning | The Best Clean on the Coast";
+const description = "Licensed & insured luxury residential, commercial, Airbnb and deep cleaning across Brevard County, FL. Call 321-258-9631.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="overflow-x-hidden">
+      <Header />
+      <Hero />
+      <About />
+      <Services />
+      <WhyUs />
+      <Process />
+      <BeforeAfter />
+      <Gallery />
+      <Reels />
+      <Testimonials />
+      <ServiceMap />
+      <Contact />
+      <Footer />
+    </main>
   );
 }
