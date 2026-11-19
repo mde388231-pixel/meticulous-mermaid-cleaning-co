@@ -53,13 +53,8 @@ export const gallery = [
   { src: office, alt: "Polished office lobby" },
 ];
 
-// Replace with genuine reviews. Placeholders only — no real customers shown.
-export const testimonials = Array.from({ length: 9 }, (_, i) => ({
-  name: `Client Name ${i + 1}`,
-  location: "Brevard County, FL",
-  body: "Your genuine client review will appear here. Edit this placeholder in the site content file.",
-  img: "",
-}));
+// Add genuine client reviews here when they are available; never publish placeholders.
+export const testimonials: { name: string; location: string; body: string; img?: string }[] = [];
 
 // Replace `src` with your video file/URL to fill each reel.
 export const reels: { title: string; src?: string }[] = [
